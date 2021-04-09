@@ -1,0 +1,32 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:12
+    container_name: 'postgres'
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./postgres/postgres-values.env
+    networks:
+      - dataspaceconnector
+    volumes:
+      - dataspaceconnector-data:/var/lib/postgresql/data
+
+  connector:
+    image: docker.pkg.github.com/international-data-spaces-association/dataspaceconnector/dataspace-connector:4.1.0
+    container_name: 'dataspaceconnector'
+    ports:
+      - 8080:8080
+    env_file:
+      - ./dataspaceconnector/dataspaceconnector-values.env
+    networks:
+      - dataspaceconnector
+    depends_on:
+      - postgres
+
+networks:
+  dataspaceconnector:
+
+volumes:
+  dataspaceconnector-data: {}
