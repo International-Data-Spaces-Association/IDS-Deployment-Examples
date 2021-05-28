@@ -1,0 +1,61 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:12
+    container_name: postgres
+    ports:
+      - 5432:5432
+    env_file:
+      - ./postgres/postgres.env
+    networks:
+      - local
+    volumes:
+      - dataspaceconnector-data:/var/lib/postgresql/data
+
+  dataspaceconnector:
+    image: docker.pkg.github.com/international-data-spaces-association/dataspaceconnector/dataspace-connector:4.3.1
+    container_name: dataspaceconnector
+    ports:
+      - 8080:8080
+    env_file:
+      - ./dataspaceconnector/dataspaceconnector.env
+    networks:
+      - local
+    depends_on:
+      - postgres
+    restart: always
+
+  configmanager:
+    image: docker.pkg.github.com/international-data-spaces-association/ids-configurationmanager/configurationmanager:7.0.0
+    container_name: configmanager
+    ports:
+      - 8081:8081
+    env_file:
+      - ./configmanager/configmanager.env
+    networks:
+      - local
+    depends_on:
+      - dataspaceconnector
+    restart: always
+
+  ui:
+    image: docker.pkg.github.com/international-data-spaces-association/ids-configurationmanager-ui/configmanager-ui:7.0.0
+    container_name: ui
+    ports:
+      - 8082:8082
+      - 8083:8083
+    env_file:
+      - ./ui/ui.env
+    networks:
+      - local
+    depends_on:
+      - configmanager
+    restart: always
+
+networks:
+  local:
+    driver: bridge
+
+volumes:
+  dataspaceconnector-data: {}
