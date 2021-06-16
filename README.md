@@ -41,4 +41,4 @@ This is an ongoing project of the developers of the IDSA Repositories:
 
 ## License
 
-Copyright © 2020 Fraunhofer ISST. This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) for details.
+Copyright © 2020 International Data Spaces Association. This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) for details.
