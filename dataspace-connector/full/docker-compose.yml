@@ -12,9 +12,10 @@ services:
       - local
     volumes:
       - dataspaceconnector-data:/var/lib/postgresql/data
+    restart: always
 
   dataspaceconnector:
-    image: docker.pkg.github.com/international-data-spaces-association/dataspaceconnector/dataspace-connector:4.3.1
+    image: ghcr.io/international-data-spaces-association/dataspace-connector@sha256:5cc164fad3be63f3add2c4bcb65482c2fbe0d6f1c9239fbae3c357bc8a53adad
     container_name: dataspaceconnector
     ports:
       - 8080:8080
@@ -22,6 +23,8 @@ services:
       - ./dataspaceconnector/dataspaceconnector.env
     networks:
       - local
+    volumes:
+      - ./dataspaceconnector/config:/conf
     depends_on:
       - postgres
     restart: always
