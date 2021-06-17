@@ -13,8 +13,8 @@ This allows us to only using the core functionalities of the Dataspace Connector
 
 ## Deployment Example
 This Dataspace Connector Deployment example consists of the following components:
-- Postgres 12
-- Dataspace Connector 4.1
+- Postgres 13
+- Dataspace Connector latest
 
 **This example can not be used with the current Metadata Broker, because a valid IDS Identity Certificate is not included**
 
@@ -23,19 +23,27 @@ This Dataspace Connector Deployment example consists of the following components
   - docker
   - docker-compose
 
-TODO Add version numbers
-
 ### Install Steps
-  - Clone repo
-  - Run 'docker-compose up' in this folder
-  - Go to 'https://localhost:8080/admin/api' 
-  - Login with username: 'admin' and password 'password'
+  - Clone the Dataspace Connector repo 
+    ```
+    git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git
+    ```
+  - Open a new terminal inside the cloned repo and navigate to this folder
+    ```
+    cd IDS-Deployment-Examples/dataspace-connector/slim/docker
+    ```
+  - Start the Dataspace Connector via docker compose
+    ```
+    docker-compose up
+    ```
+  - Go to `https://localhost:8080/api/docs`
+  - Login with username `admin` and password `password`
   - The [Communication Guide](https://international-data-spaces-association.github.io/DataspaceConnector/CommunicationGuide) explains how to use the APIs of the connector
 
 Individual settings can be made via the .env-files of the respective components.
 
 ### Uninstall
-  - Run 'docker-compose down' in this folder
+  - Run `docker-compose down` inside the same folder you started the Dataspace Connector
   - Remove the repository folder
   
 ## Developers

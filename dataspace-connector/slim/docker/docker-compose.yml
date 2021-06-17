@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   postgres:
-    image: postgres:12
+    image: postgres:13
     container_name: 'postgres'
     ports:
       - "5432:5432"
@@ -14,7 +14,7 @@ services:
       - dataspaceconnector-data:/var/lib/postgresql/data
 
   connector:
-    image: docker.pkg.github.com/international-data-spaces-association/dataspaceconnector/dataspace-connector:4.1.0
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:latest
     container_name: 'dataspaceconnector'
     ports:
       - 8080:8080
