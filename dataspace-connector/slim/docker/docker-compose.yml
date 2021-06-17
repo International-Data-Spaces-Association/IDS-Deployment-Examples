@@ -22,6 +22,8 @@ services:
       - ./dataspaceconnector/dataspaceconnector-values.env
     networks:
       - dataspaceconnector
+    volumes:
+      - ./dataspaceconnector/config:/config
     depends_on:
       - postgres
 
