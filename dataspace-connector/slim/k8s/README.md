@@ -16,8 +16,12 @@ This Dataspace Connector Deployment example consists of the following components
 - Postgres 13
 - Dataspace Connector latest
 
-**This example can not be used with the current Metadata Broker, because a valid IDS Identity Certificate is not included**
+---
 
+**Note**: 
+This example can not be used with the current IDS Metadata Broker off-the-shelf, because a valid IDS identity certificate is not included. 
+
+---
 ### Prerequisites
   - git
   - minikube

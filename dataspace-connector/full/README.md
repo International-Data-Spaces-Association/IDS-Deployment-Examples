@@ -15,6 +15,7 @@ In this setup the [Dataspace Connector](https://github.com/International-Data-Sp
 
 This allows us to use the full potential of all functionalities on the Dataspace Connector and the services around it. 
 
+
 ## Deployment Example
 This Dataspace Connector Deployment example consists of the following components:
 - Postgres 12
@@ -22,16 +23,28 @@ This Dataspace Connector Deployment example consists of the following components
 - Configuration Manager 7.0.0
 - Configuration Manager GUI 7.0.0
 
+---
+
+**Note**: 
+This example can not be used with the current IDS Metadata Broker off-the-shelf, because a valid IDS identity certificate is not included. 
+
+---
+
 ### Prerequisites
   - git
   - docker
   - docker-compose
 
-TODO Add version numbers
-
 ### Install Steps
-  - Clone repo
-  - Run 'docker-compose up' in this folder (A GitHub account is required in order to be able to pull the different images.)
+  - Clone the Dataspace Connector repo 
+    ```
+    git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git
+    ```
+  - Open a new terminal inside the cloned repo and navigate to this folder
+    ```
+    cd IDS-Deployment-Examples/dataspace-connector/slim/docker
+    ```
+    **Note:** A GitHub account is required in order to be able to pull the different images.
   - After all systems have been booted, they can be reached at the following addresses in the standard case:
     - Configuration Manager GUI 7.0.0: http://localhost:8082/dashboard
     - Configuration Manager 7.0.0 Swagger-UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
