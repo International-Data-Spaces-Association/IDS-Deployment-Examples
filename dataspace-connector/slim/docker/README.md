@@ -11,12 +11,6 @@ In this setup only the [Dataspace Connector](https://github.com/International-Da
 
 This allows us to only using the core functionalities of the Dataspace Connector without having an graphical user interface and the logic of the ConfigurationManager to install IDS Apps and configure Camel routes.
 
-## Deployment Example
-This Dataspace Connector Deployment example consists of the following components:
-- Postgres 13
-- Dataspace Connector latest
-
-
 ---
 
 **Note**: 
@@ -26,28 +20,35 @@ Other than described there, the ```config.json``` and the ```KeyStore``` are loc
 
 ---
 
+## Deployment Example
+This Dataspace Connector Deployment example consists of the following components:
+
+| Component | Version |
+|:----------|:--------|
+| Dataspace Connector | latest |
+| Postgres | 13 |
 
 ### Prerequisites
-  - git
-  - docker
-  - docker-compose
+  - Git
+  - Docker
+  - Docker Compose
 
 ### Install Steps
-  - Clone the Dataspace Connector repo 
+  1. Clone the Dataspace Connector repo 
     ```
     git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git
     ```
-  - Open a new terminal inside the cloned repo and navigate to this folder
+  2. Open a new terminal inside the cloned repo and navigate to this folder
     ```
     cd IDS-Deployment-Examples/dataspace-connector/slim/docker
     ```
-  - Start the Dataspace Connector via docker compose
+  3. Start the Dataspace Connector via docker compose
     ```
     docker-compose up
     ```
-  - Go to `https://localhost:8080/api/docs`
-  - Login with username `admin` and password `password`
-  - The [Communication Guide](https://international-data-spaces-association.github.io/DataspaceConnector/CommunicationGuide) explains how to use the APIs of the connector
+  4. Go to `https://localhost:8080/api/docs`
+  5. Login with username `admin` and password `password`
+  6. The [Communication Guide](https://international-data-spaces-association.github.io/DataspaceConnector/CommunicationGuide) explains how to use the APIs of the connector
 
 Individual settings can be made via the ```.env-files``` of the respective components and via ```config.json``` in ```/dataspaceconnector/config/``` (see [Configuration](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration)).
 

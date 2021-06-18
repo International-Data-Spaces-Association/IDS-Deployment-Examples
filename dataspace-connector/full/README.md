@@ -12,7 +12,7 @@ This is a deployment example for the **Full Setup** of the Dataspace Connector. 
 
 **Note**: 
 This example can not be used with the current IDS Metadata Broker off-the-shelf as a valid IDS identity certificate is not included. 
-To get and install your own IDS identity certificate, please read the provided [guide](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration#step-2-ids-certificate).
+To get and install your own IDS identity certificate, please read the provided [Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip).
 Other than described there, in this example, the `config.json` and the `KeyStore` are located at  `/dataspaceconnector/config/`.
 
 ---
@@ -63,7 +63,7 @@ This deployment example builds on the following compatible versions:
    - Configuration Manager Swagger UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
    - Configuration Manager GUI: http://localhost:8082/dashboard
 
-Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` (see [here](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration)).
+Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` (see [Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip)).
 
 ### Stop Docker Container
 To stop the running containers, execute `docker-compose down` in this folder.
