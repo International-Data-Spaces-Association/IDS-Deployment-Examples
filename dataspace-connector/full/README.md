@@ -6,72 +6,75 @@
   <br>
 </h1>
 
-This is the **Full Setup** of the Dataspace Connector.
-In this setup the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with extensions:
-* [Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager), 
-* [Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), 
-* Postgres DB
-
-In addition, the following Dataspace Connector extensions exist, which will also be included in future deployment example setups:
-* [Camel](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance)
-
-This deployment example allows the use of the full potential of all functionalities on the Dataspace Connector and the services around it. 
-
-### Components & Versions
-This deployment example builds on the following compatible versions:
-- Dataspace Connector 4.3.1
-- Configuration Manager 7.0.0
-- Configuration Manager GUI 7.0.0
-- Postgres 12
+This is a deployment example for the **Full Setup** of the Dataspace Connector. It allows the exploration of all holistic functionalities of the Dataspace Connector and its services. 
 
 ---
 
 **Note**: 
-This example can not be used with the current IDS Metadata Broker off-the-shelf, because a valid IDS identity certificate is not included. 
-To get and install your own IDS identity certificate please read the instruction: [IDS Certificate](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration#step-2-ids-certificate).
-Other than described there, the ```config.json``` and the ```KeyStore``` are located at  ```/dataspaceconnector/config/``` in this deployment example.
+This example can not be used with the current IDS Metadata Broker off-the-shelf as a valid IDS identity certificate is not included. 
+To get and install your own IDS identity certificate, please read the provided [guide](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration#step-2-ids-certificate).
+Other than described there, in this example, the `config.json` and the `KeyStore` are located at  `/dataspaceconnector/config/`.
 
 ---
 
-### Prerequisites
-  - git
-  - docker
-  - docker-compose
+In this setup, the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with the listed extensions:
+* [Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager), 
+* [Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), 
+* Postgres DB
 
-### Install Steps
-  - Clone the IDS-Deployment-Examples GitHub repo
+In addition, the following Dataspace Connector extensions will be included in future deployment example setups:
+* [Camel](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance)
+
+
+### Components & Versions
+This deployment example builds on the following compatible versions:
+
+| Component | Version |
+|:----------|:--------|
+| Dataspace Connector | 4.3.1 |
+| Configuration Manager | 7.0.0 |
+| Configuration Manager GUI | 7.0.0 |
+| Postgres | 12 |
+
+### Prerequisites
+  - Git
+  - Docker
+  - Docker Compose
+
+### Installation Steps
+1. Clone the IDS Deployment Examples GitHub repository.
     ```
     git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git
     ```
-  - Open a new terminal inside the cloned repo and navigate to this folder
+2. Open a new terminal inside the created directory and navigate to this folder.
     ```
     cd IDS-Deployment-Examples/dataspace-connector/full
     ```
-  - Use docker-compose command to load the different Docker images of the components. **Note:** A GitHub account and docker-login is required in order to be able to pull all images of this deployment example.
+3. Use a Docker Compose command to load the different Docker images of the components. **Note:** A GitHub account and Docker login is required for being able to pull all images of this deployment example.
     ```
     docker-compose pull
     ```
-  - Use docker-compose command to start the different Docker container of the components
+4. Use a Docker Compose command to start all of the component's Docker containers.
     ```
     docker-compose up
     ```    
-  - After all systems have been booted, they can be reached at the following addresses in the standard case:
-    - Dataspace Connector Swagger-UI: https://localhost:8080/admin/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
-    - Configuration Manager Swagger-UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
-    - Configuration Manager GUI: http://localhost:8082/dashboard
+5. After all systems have been booted, they can be reached (by default) at the following URLs:
+   - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
+   - Configuration Manager Swagger UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
+   - Configuration Manager GUI: http://localhost:8082/dashboard
 
-Individual settings can be made via the ```.env-files``` of the respective components and via ```config.json``` in ```/dataspaceconnector/config/``` (see [Configuration](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration)).
+Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` (see [here](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration)).
 
 ### Stop Docker Container
-  - Run 'docker-compose down' in this folder
+To stop the running containers, execute `docker-compose down` in this folder.
 
 ### Developers
 
-This is an ongoing project of the developers of the Dataspace Connector Repositories:
-* [DataspaceConnector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
-* [DSC-Camel-Instance](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance)
-* [IDS-ConfigurationManager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager)
-* [IDS-ConfigurationManager-UI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI)
+This is an ongoing project of the developers of the Dataspace Connector repositories:
+* [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
+* [DSC Camel Instance](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance)
+* [IDS Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager)
+* [IDS Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI)
 
 
 
