@@ -33,7 +33,7 @@ This deployment example builds on the following compatible versions:
 |:----------|:--------|
 | Dataspace Connector | 4.3.1 |
 | Configuration Manager | 7.0.0 |
-| Configuration Manager GUI | 7.0.0 |
+| Configuration Manager GUI | 7.0.1 |
 | Postgres | 12 |
 
 ### Prerequisites
@@ -50,7 +50,7 @@ This deployment example builds on the following compatible versions:
     ```
     cd IDS-Deployment-Examples/dataspace-connector/full
     ```
-3. Use a Docker Compose command to load the different Docker images of the components. **Note:** A GitHub account and Docker login is required for being able to pull all images of this deployment example.
+3. Use a Docker Compose command to load the different Docker images of the components.
     ```
     docker-compose pull
     ```

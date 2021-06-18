@@ -15,7 +15,7 @@ services:
     restart: always
 
   dataspaceconnector:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector@sha256:5cc164fad3be63f3add2c4bcb65482c2fbe0d6f1c9239fbae3c357bc8a53adad
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:4.3.1
     container_name: dataspaceconnector
     ports:
       - 8080:8080
@@ -30,7 +30,7 @@ services:
     restart: always
 
   configmanager:
-    image: docker.pkg.github.com/international-data-spaces-association/ids-configurationmanager/configurationmanager:7.0.0
+    image: ghcr.io/international-data-spaces-association/ids-configurationmanager/configurationmanager:7.0.0
     container_name: configmanager
     ports:
       - 8081:8081
@@ -43,7 +43,7 @@ services:
     restart: always
 
   ui:
-    image: docker.pkg.github.com/international-data-spaces-association/ids-configurationmanager-ui/configmanager-ui:7.0.0
+    image: ghcr.io/international-data-spaces-association/configmanager-ui:7.0.1
     container_name: ui
     ports:
       - 8082:8082
