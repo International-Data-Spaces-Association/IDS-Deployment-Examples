@@ -65,8 +65,9 @@ This deployment example builds on the following compatible versions:
 
 Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` ([Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip) for detailed information).
 
-### Stop Docker Container
-To stop the running containers, execute `docker-compose down` in this folder.
+### Stop & Uninstall
+  - Run `docker-compose down` inside the same folder you started the Dataspace Connector
+  - Remove the repository folder
 
 ### Developers
 

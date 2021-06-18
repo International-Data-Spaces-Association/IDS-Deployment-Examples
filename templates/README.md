@@ -4,9 +4,8 @@ Deployment Example Name
 
 General Description
 
-## Deployment Example
+### Components & Versions
 
-Description about the example
 
 ### Prerequisites
 
@@ -14,7 +13,7 @@ Description about the example
 ### Install Steps
 
 
-### Uninstall
+### Stop & Uninstall
 
 
 ## Developers

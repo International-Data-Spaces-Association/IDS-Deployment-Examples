@@ -20,7 +20,7 @@ Other than described there, the ```config.json``` and the ```KeyStore``` are loc
 
 ---
 
-## Deployment Example
+### Components & Versions
 This Dataspace Connector Deployment example consists of the following components:
 
 | Component | Version |
@@ -56,7 +56,7 @@ This Dataspace Connector Deployment example consists of the following components
 
 Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` (see [here](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration)).
 
-### Uninstall
+### Stop & Uninstall
   - Run `docker-compose down` inside the same folder you started the Dataspace Connector
   - Remove the repository folder
   
