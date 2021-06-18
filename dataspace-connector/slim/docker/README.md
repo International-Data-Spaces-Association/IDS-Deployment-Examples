@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-This is the **Slim Setup** of the Dataspace Connector.
+This is a deployment example for the **Slim Setup** of the Dataspace Connector.
 In this setup only the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) and Postgres as database are started, without Camel, Configmanager and UI.
 
 This allows us to only using the core functionalities of the Dataspace Connector without having an graphical user interface and the logic of the ConfigurationManager to install IDS Apps and configure Camel routes.
@@ -38,11 +38,15 @@ This Dataspace Connector Deployment example consists of the following components
     ```
     git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git
     ```
-  2. Open a new terminal inside the cloned repo and navigate to this folder
+  2. Open a new terminal inside the created direcotry and navigate to this folder.
     ```
     cd IDS-Deployment-Examples/dataspace-connector/slim/docker
     ```
-  3. Start the Dataspace Connector via docker compose
+  3. Use a Docker Compose command to load the different Docker images of the components.
+    ```
+    docker-compose pull
+    ``` 
+  4. Use a Docker Compose command to start all of the component's Docker containers.
     ```
     docker-compose up
     ```
@@ -50,7 +54,7 @@ This Dataspace Connector Deployment example consists of the following components
   5. Login with username `admin` and password `password`
   6. The [Communication Guide](https://international-data-spaces-association.github.io/DataspaceConnector/CommunicationGuide) explains how to use the APIs of the connector
 
-Individual settings can be made via the ```.env-files``` of the respective components and via ```config.json``` in ```/dataspaceconnector/config/``` (see [Configuration](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration)).
+Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` (see [here](https://international-data-spaces-association.github.io/DataspaceConnector/Deployment/Configuration)).
 
 ### Uninstall
   - Run `docker-compose down` inside the same folder you started the Dataspace Connector

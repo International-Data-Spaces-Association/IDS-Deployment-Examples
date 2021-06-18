@@ -63,7 +63,7 @@ This deployment example builds on the following compatible versions:
    - Configuration Manager Swagger UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
    - Configuration Manager GUI: http://localhost:8082/dashboard
 
-Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` (see [Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip)).
+Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` ([Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip) for detailed information).
 
 ### Stop Docker Container
 To stop the running containers, execute `docker-compose down` in this folder.
