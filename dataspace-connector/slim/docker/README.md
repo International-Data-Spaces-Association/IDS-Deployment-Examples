@@ -33,7 +33,7 @@ This Dataspace Connector Deployment example consists of the following components
   - Docker
   - Docker Compose
 
-### Install Steps
+### Installation Steps
 1. Clone the IDS Deployment Examples GitHub repository.
     ```
     git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git

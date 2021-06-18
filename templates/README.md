@@ -10,7 +10,7 @@ General Description
 ### Prerequisites
 
 
-### Install Steps
+### Installation Steps
 
 
 ### Stop & Uninstall
