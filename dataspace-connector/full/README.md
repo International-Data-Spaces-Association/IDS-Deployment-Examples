@@ -55,9 +55,9 @@ This deployment example builds on the following compatible versions:
     docker-compose pull
     ```
 4. Use a Docker Compose command to start all of the component's Docker containers.
-    ```
-    docker-compose up
-    ```    
+   ```
+   docker-compose up
+   ```    
 5. After all systems have been booted, they can be reached (by default) at the following URLs:
    - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
    - Configuration Manager Swagger UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
@@ -69,7 +69,7 @@ Individual settings can be provided via the `.env-files` of the respective compo
   - Run `docker-compose down` inside the same folder you started the Dataspace Connector
   - Remove the repository folder
 
-### Developers
+## Developers
 
 This is an ongoing project of the developers of the Dataspace Connector repositories:
 * [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
