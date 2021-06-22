@@ -8,9 +8,9 @@
 
 This folder provides examples to set up the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector).
 We distinguish between three categories:
-1. **Full Setup**: The [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with all its extensions, i.e. [Configmanager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager), [GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), [Camel](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance), Postgres DB.
+1. **Full Setup**: The [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with all its extensions, i.e. [ConfigurationManager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager), [GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), [Camel](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance), PostgreSQL DB.
 2. **Provider-Consumer Setup**: Here two [Dataspace Connectors](https://github.com/International-Data-Spaces-Association/DataspaceConnector) are started, so that data can be exchanged between them. (**tbd.**)
-3. **Slim Setup**: In this setup only the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) and Postgres as database are started, without Camel, Configmanager and GUI.
+3. **Slim Setup**: In this setup only the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) and PostgreSQL as database are started, without Camel, ConfigurationManager and GUI.
 
 For more details see here: [Dataspace Connector Architecture](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/Architecture)
 

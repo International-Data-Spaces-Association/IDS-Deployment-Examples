@@ -20,7 +20,7 @@ Other than described there, in this example, the `config.json` and the `KeyStore
 In this setup, the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with the listed extensions:
 * [Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager), 
 * [Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), 
-* Postgres DB
+* PostgreSQL DB
 
 In addition, the following Dataspace Connector extensions will be included in future deployment example setups:
 * [Camel](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance)
@@ -34,7 +34,7 @@ This deployment example builds on the following compatible versions:
 | Dataspace Connector | 4.3.1 |
 | Configuration Manager | 7.0.0 |
 | Configuration Manager GUI | 7.0.1 |
-| Postgres | 12 |
+| PostgreSQL | 12 |
 
 ### Prerequisites
   - Git

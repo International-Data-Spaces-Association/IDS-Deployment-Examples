@@ -19,7 +19,7 @@ The IDS Deployment Examples Repository is used to provide working deployments ac
 ## Overview
 
 The repository is organized as follows: 
-* Per component or component bundle (union from e.g. Dataspace Connector and Metadata broker or Dataspace Connector and Trusted Connector) a folder is created. This again contains possibly independent Variatonen for e.g. minimal/full Setups or Helm/Kubernetes/Docker Setups.
+* Per component or component bundle (union from e.g. Dataspace Connector and Metadata Broker or Dataspace Connector and Trusted Connector) a folder is created. This again contains possibly independent variations for e.g. minimal/full Setups or Helm/Kubernetes/Docker Setups.
 * Additionally there is a templates folder, which provides templates for the Deployment Examples.
 
 

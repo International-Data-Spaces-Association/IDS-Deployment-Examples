@@ -7,7 +7,7 @@
 </h1>
 
 This is a deployment example for the **Slim Setup** of the Dataspace Connector.
-In this setup only the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) and Postgres as database are started, without Camel, Configmanager and UI.
+In this setup only the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) and PostgreSQL as database are started, without Camel, ConfigurationManager and UI.
 
 This allows us to only using the core functionalities of the Dataspace Connector without having an graphical user interface and the logic of the ConfigurationManager to install IDS Apps and configure Camel routes.
 
@@ -26,7 +26,7 @@ This Dataspace Connector Deployment example consists of the following components
 | Component | Version |
 |:----------|:--------|
 | Dataspace Connector | latest |
-| Postgres | 13 |
+| PostgreSQL | 13 |
 
 ### Prerequisites
   - Git
@@ -38,7 +38,7 @@ This Dataspace Connector Deployment example consists of the following components
     ```
     git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git
     ```
-2. Open a new terminal inside the created direcotry and navigate to this folder.
+2. Open a new terminal inside the created directory and navigate to this folder.
     ```
     cd IDS-Deployment-Examples/dataspace-connector/slim/docker
     ``` 

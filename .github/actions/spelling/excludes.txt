@@ -1,0 +1,17 @@
+\.avi$
+\.json$
+\.p12$
+\.env$
+^\.github/
+\.ico$
+ignore$
+\.jpe?g$
+\.lock$
+\.map$
+\.min\.
+\.mod$
+\.mp[34]$
+\.png$
+\.wav$
+\.yml$
+\.yaml$

@@ -7,7 +7,7 @@
 </h1>
 
 This is the **Slim Setup** of the Dataspace Connector.
-In this setup only the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) and Postgres as database are started, without Camel, Configmanager and UI.
+In this setup only the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) and PostgreSQL as database are started, without Camel, ConfigurationManager and UI.
 
 This allows us to only using the core functionalities of the Dataspace Connector without having an graphical user interface and the logic of the ConfigurationManager to install IDS Apps and configure Camel routes.
 

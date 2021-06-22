@@ -1,0 +1,21 @@
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
+https://(?:[a-z-]+\.|)github(?:usercontent|)\.com/[-a-zA-Z0-9?%&=_\/.]*
+https://(?:[a-z-]+\.|)github\.io/[-a-zA-Z0-9?%&=_\/.]*
+https://(?:(?:[-a-zA-Z0-9?&=]*\.|)internationaldataspaces\.org)/[-a-zA-Z0-9?&=_#\/.]*
+https://deepsource.io/blog/git-branch-naming-conventions/
+https://www.conventionalcommits.org/en/v1.0.0/
+https://(?:(?:[-a-zA-Z0-9?&=]*\.|)dataspace-connector\.de)/[-a-zA-Z0-9?&=_#\/.]*
+Dataspace Connector
+dataspace-connector
+Metadata Broker
+http://keepachangelog.com
+`/dataspaceconnector/config/`
+`config.json`
+export POD_NAME=\$\((.*?)\)
+export CONTAINER_PORT=\$\((.*?)\)
+helm install dataspaceconnector charts/dataspace-connector
+helm uninstall dataspaceconnector
+https://localhost:8080/api/docs
+http://localhost:8081/swagger-ui/index\.html\?url=/v3/api-docs/
+http://localhost:8082/dashboard
