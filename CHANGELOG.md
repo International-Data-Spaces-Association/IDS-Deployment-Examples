@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2021-06-22
+
+### Added
+- Add spellchecking
+
 ## 2021-06-16
 
 ### Added
