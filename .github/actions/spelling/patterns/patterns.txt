@@ -17,5 +17,5 @@ export CONTAINER_PORT=\$\((.*?)\)
 helm install dataspaceconnector charts/dataspace-connector
 helm uninstall dataspaceconnector
 https://localhost:8080/api/docs
-http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
+http://localhost:8081/swagger-ui/index\.html\?url=/v3/api-docs/
 http://localhost:8082/dashboard
