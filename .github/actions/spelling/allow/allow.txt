@@ -16,3 +16,5 @@ Minikube
 Helm
 username
 namespace
+href
+src
