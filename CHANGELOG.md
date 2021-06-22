@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 ## 2021-06-22
 
 ### Added
-- Add spellchecking
+- Add spell checking
 
 ## 2021-06-16
 
