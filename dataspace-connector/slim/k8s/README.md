@@ -13,7 +13,7 @@ This allows us to only using the core functionalities of the Dataspace Connector
 
 ## Deployment Example
 This Dataspace Connector Deployment example consists of the following components:
-- Postgresql 13
+- PostgreSQL 13
 - Dataspace Connector latest
 
 ---
