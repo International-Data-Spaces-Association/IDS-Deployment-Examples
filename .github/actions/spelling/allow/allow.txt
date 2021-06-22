@@ -18,3 +18,4 @@ username
 namespace
 href
 src
+img
