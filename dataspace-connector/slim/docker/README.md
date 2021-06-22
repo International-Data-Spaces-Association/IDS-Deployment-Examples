@@ -38,7 +38,7 @@ This Dataspace Connector Deployment example consists of the following components
     ```
     git clone https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples.git
     ```
-2. Open a new terminal inside the created direcotry and navigate to this folder.
+2. Open a new terminal inside the created directory and navigate to this folder.
     ```
     cd IDS-Deployment-Examples/dataspace-connector/slim/docker
     ``` 
