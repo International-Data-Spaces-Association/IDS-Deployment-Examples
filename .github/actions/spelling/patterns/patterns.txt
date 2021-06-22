@@ -13,5 +13,5 @@ Metadata Broker
 http://keepachangelog.com
 `/dataspaceconnector/config/`
 `config.json`
-app.kubernetes.io
+export POD_NAME=\$\(*\)
 helm install dataspaceconnector charts/dataspace-connector
