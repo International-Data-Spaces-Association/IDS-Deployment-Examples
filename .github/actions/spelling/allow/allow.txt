@@ -10,3 +10,6 @@ tbd
 PostgreSQL
 URLs
 Uninstall
+kubectl
+Minikube
+Helm

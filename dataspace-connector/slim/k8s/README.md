@@ -23,9 +23,9 @@ This example can not be used with the current IDS Metadata Broker off-the-shelf,
 
 ---
 ### Prerequisites
-  - git
-  - minikube
-  - helm
+  - Git
+  - Minikube
+  - Helm
 
 ### Install Steps
   - Clone the Dataspace Connector repo 
