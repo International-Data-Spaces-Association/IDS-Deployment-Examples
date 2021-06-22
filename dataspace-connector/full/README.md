@@ -34,7 +34,7 @@ This deployment example builds on the following compatible versions:
 | Dataspace Connector | 4.3.1 |
 | Configuration Manager | 7.0.0 |
 | Configuration Manager GUI | 7.0.1 |
-| Postgres | 12 |
+| PostgreSQL | 12 |
 
 ### Prerequisites
   - Git

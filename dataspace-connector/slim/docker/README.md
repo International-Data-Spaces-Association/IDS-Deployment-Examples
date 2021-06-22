@@ -26,7 +26,7 @@ This Dataspace Connector Deployment example consists of the following components
 | Component | Version |
 |:----------|:--------|
 | Dataspace Connector | latest |
-| Postgresql | 13 |
+| PostgreSQL | 13 |
 
 ### Prerequisites
   - Git
