@@ -1,6 +1,14 @@
-ignore$
 \.avi$
+^dataspace-connector/full/dataspaceconnector/config/config\.json$
+^dataspace-connector/full/dataspaceconnector/config/keystore\.p12$
+^dataspace-connector/full/dataspaceconnector/config/truststore\.p12$
+^dataspace-connector/full/ui/ui\.env$
+^dataspace-connector/slim/docker/dataspaceconnector/config/config\.json$
+^dataspace-connector/slim/docker/dataspaceconnector/config/keystore\.p12$
+^dataspace-connector/slim/docker/dataspaceconnector/config/truststore\.p12$
+^\.github/
 \.ico$
+ignore$
 \.jpe?g$
 \.lock$
 \.map$
@@ -9,4 +17,3 @@ ignore$
 \.mp[34]$
 \.png$
 \.wav$
-^\.github/
