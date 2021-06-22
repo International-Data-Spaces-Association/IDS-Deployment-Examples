@@ -8,6 +8,7 @@ Kubernetes
 bugfix
 tbd
 PostgreSQL
+URL
 URLs
 Uninstall
 kubectl

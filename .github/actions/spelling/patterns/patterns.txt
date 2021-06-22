@@ -14,3 +14,4 @@ http://keepachangelog.com
 `/dataspaceconnector/config/`
 `config.json`
 app.kubernetes.io
+helm install dataspaceconnector charts/dataspace-connector
