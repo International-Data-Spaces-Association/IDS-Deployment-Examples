@@ -17,4 +17,3 @@ export POD_NAME=\$\((.*?)\)
 export CONTAINER_PORT=\$\((.*?)\)
 helm install dataspaceconnector charts/dataspace-connector
 helm uninstall dataspaceconnector
-^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?
