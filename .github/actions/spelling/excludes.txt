@@ -13,3 +13,5 @@ ignore$
 \.mp[34]$
 \.png$
 \.wav$
+\.yml$
+\.yaml$
