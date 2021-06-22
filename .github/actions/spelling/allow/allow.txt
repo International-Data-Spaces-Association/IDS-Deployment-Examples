@@ -15,3 +15,4 @@ kubectl
 Minikube
 Helm
 username
+namespace
