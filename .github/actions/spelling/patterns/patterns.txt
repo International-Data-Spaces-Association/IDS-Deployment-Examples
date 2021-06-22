@@ -1,6 +1,7 @@
 # ignore long runs of a single character:
 \b([A-Za-z])\g{-1}{3,}\b
 https://(?:[a-z-]+\.|)github(?:usercontent|)\.com/[-a-zA-Z0-9?%&=_\/.]*
+https://(?:[a-z-]+\.|)localhost/[-a-zA-Z0-9?%&=_\/.]*
 https://(?:[a-z-]+\.|)github\.io/[-a-zA-Z0-9?%&=_\/.]*
 https://(?:(?:[-a-zA-Z0-9?&=]*\.|)internationaldataspaces\.org)/[-a-zA-Z0-9?&=_#\/.]*
 https://deepsource.io/blog/git-branch-naming-conventions/

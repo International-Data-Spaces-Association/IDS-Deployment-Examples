@@ -9,3 +9,4 @@ bugfix
 tbd
 PostgreSQL
 URLs
+Uninstall
