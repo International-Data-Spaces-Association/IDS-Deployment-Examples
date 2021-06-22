@@ -4,3 +4,4 @@ https://(?:[a-z-]+\.|)github(?:usercontent|)\.com/[-a-zA-Z0-9?%&=_\/.]*
 https://(?:(?:[-a-zA-Z0-9?&=]*\.|)internationaldataspaces\.org)/[-a-zA-Z0-9?&=_#\/.]*
 https://deepsource.io/blog/git-branch-naming-conventions/
 https://www.conventionalcommits.org/en/v1.0.0/
+https://(?:(?:[-a-zA-Z0-9?&=]*\.|)dataspace-connector\.de)/[-a-zA-Z0-9?&=_#\/.]*
