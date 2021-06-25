@@ -58,24 +58,18 @@ services:
 
   keycloak:
     image: jboss/keycloak:14.0.0
-    depends_on:
-      - postgres
     container_name: keycloak
-    environment:
-      DB_VENDOR: postgres
-      DB_ADDR: postgres
-      DB_DATABASE: connectordb
-      DB_USER: connector
-      DB_PASSWORD: 12345
-      KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
     ports:
       - 8180:8080
-    restart: unless-stopped
+    env_file:
+      - ./keycloak/keycloak.env
     networks:
       - local
     volumes:
       - keycloak-data:/var/lib/keycloak
+    depends_on:
+      - postgres
+    restart: unless-stopped
 
 networks:
   local:
