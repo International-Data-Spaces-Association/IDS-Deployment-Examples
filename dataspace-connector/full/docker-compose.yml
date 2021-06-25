@@ -70,7 +70,7 @@ services:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
     ports:
-      - "8180:8080"
+      - 8180:8080
     restart: unless-stopped
     networks:
       - local
