@@ -56,9 +56,31 @@ services:
       - configmanager
     restart: always
 
+  keycloak:
+    depends_on:
+      - postgres
+    container_name: local_keycloak
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: postgres
+      DB_DATABASE: connectordb
+      DB_USER: connector
+      DB_PASSWORD: 12345
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    image: jboss/keycloak:13.0.0
+    ports:
+      - "8180:8080"
+    restart: unless-stopped
+    networks:
+      - local
+    volumes:
+      - keycloak-data:/var/lib/keycloak
+
 networks:
   local:
     driver: bridge
 
 volumes:
   dataspaceconnector-data: {}
+  keycloak-data: {}
