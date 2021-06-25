@@ -57,6 +57,7 @@ services:
     restart: always
 
   keycloak:
+    image: jboss/keycloak:14.0.0
     depends_on:
       - postgres
     container_name: keycloak
@@ -68,7 +69,6 @@ services:
       DB_PASSWORD: 12345
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
-    image: jboss/keycloak:13.0.0
     ports:
       - "8180:8080"
     restart: unless-stopped
