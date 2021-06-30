@@ -25,12 +25,13 @@ services:
       - local
     volumes:
       - ./dataspaceconnector/config:/conf
+      - ./truststore.p12:/conf/truststore.p12
     depends_on:
       - postgres
     restart: always
 
   configmanager:
-    image: ghcr.io/international-data-spaces-association/ids-configurationmanager/configurationmanager:7.0.0
+    image: ghcr.io/international-data-spaces-association/ids-configurationmanager/configurationmanager:7.1.0
     container_name: configmanager
     ports:
       - 8081:8081
@@ -43,7 +44,7 @@ services:
     restart: always
 
   ui:
-    image: ghcr.io/international-data-spaces-association/configmanager-ui:7.0.1
+    image: ghcr.io/international-data-spaces-association/configmanager-ui:7.1.0
     container_name: ui
     ports:
       - 8082:8082
@@ -54,6 +55,19 @@ services:
       - local
     depends_on:
       - configmanager
+    restart: always
+
+  dsc-camel:
+    image: ghcr.io/international-data-spaces-association/dsc-camel-instance:1.2.1
+    container_name: dsc-camel
+    ports:
+      - 9090:9090
+    env_file:
+      - ./dsc-camel/dsc-camel.env
+    volumes:
+      - ./truststore.p12:/config/truststore.p12
+    networks:
+      - local
     restart: always
 
 networks:
