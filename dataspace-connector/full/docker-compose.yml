@@ -91,3 +91,4 @@ networks:
 
 volumes:
   dataspaceconnector-data: {}
+  keycloak-data: {}
