@@ -68,6 +68,15 @@ Individual settings can be provided via the `.env-files` of the respective compo
   - Run `docker-compose down` inside the same folder you started the Dataspace Connector
   - Remove the repository folder
 
+### Keycloak Configuration
+Keycloak can be used as the Identity and Access Management System. Once the keycloak service is up and running, 
+the following steps are necessary for configuration:
+
+1. Log in to the Keycloak administration control. The admin credentials are found in keycloak/keycloak.env file. To access keycloak, navigate to localhost:8180 on the machine that is running the service
+2. Create a realm named CMRealm (this can be configured in the configmanager/configmanager.env file)
+3. Create a client named configmanager. Set the valid redirect URLs to ``http://localhost:8081/*`` (the configmanager URL)
+4. In this step, you can create up to 3 roles. The role names have to be specified in configmanager/configmanager.env and should correspond to the IDS roles admin, consumer and provider
+5. Create users and assign them roles
 ## Developers
 
 This is an ongoing project of the developers of the Dataspace Connector repositories:
