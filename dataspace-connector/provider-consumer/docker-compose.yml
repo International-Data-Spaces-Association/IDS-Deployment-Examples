@@ -1,0 +1,33 @@
+version: '3.5'
+
+services:
+
+  provider:
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:5.1.2
+    ports:
+      - 8080:8080
+    networks:
+      - local
+    volumes:
+      - ./config_provider.json:/config/config.json
+    environment:
+      - SERVER_SSL_ENABLED=false
+      - CONFIGURATION_PATH=/config/config.json
+    restart: always
+
+  consumer:
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:5.1.2
+    ports:
+      - 8081:8080
+    networks:
+      - local
+    volumes:
+      - ./config_consumer.json:/config/config.json
+    environment:
+      - SERVER_SSL_ENABLED=false
+      - CONFIGURATION_PATH=/config/config.json
+    restart: always
+
+networks:
+  local:
+    driver: bridge
