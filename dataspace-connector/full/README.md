@@ -57,7 +57,8 @@ This deployment example builds on the following compatible versions:
    docker-compose up
    ```    
 5. After all systems have been booted, they can be reached (by default) at the following URLs:
-   - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
+   - Dataspace Connector Swagger UI: https://localhost:8080/admin/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+     - Basic-Auth default credentials: username = admin, password = password
    - Configuration Manager Swagger UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
    - Configuration Manager GUI: http://localhost:8082/dashboard
    - DSC Camel Instance: https://localhost:9090
