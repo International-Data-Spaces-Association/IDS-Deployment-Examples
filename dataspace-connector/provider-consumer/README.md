@@ -6,19 +6,19 @@ General Description
 
 ### Introduction
 This is a simple producer-consumer-example. In this example you will
-- start up two DataspaceConnectors
+- start up two Dataspace Connectors
 - register a resource at the provider connector using a shell script
 - negotiate a contract at the consumer connector
 - consume the resource
 
-For the sake of simplicity this example uses the DataspaceConnector with an in-built H2 database.
+For the sake of simplicity this example uses the Dataspace Connector with an in-built H2 database.
 Therefore, we do not set up additional database containers.
 
 ### Prerequisites
 You need docker compose to run this example.
 
 ### Installation Steps
-To start the producer- and consumer DataspaceConnector from the given docker-compose.xml file do
+To start the producer- and consumer Dataspace Connector from the given docker-compose.xml file do
 ```console
 docker-compose up -d
 ```
@@ -61,7 +61,7 @@ Note that the __ids:resourceCatalog__ is currently empty. The provider does not 
 #### Setting up a resource
 A resource at the provider connector can be setup using the provided __create_resource.sh__ script. Simply run
 ```console
-./crate_resource.sh
+./create_resource.sh
 ```
 to set up the resource on the provider.
 
@@ -158,11 +158,12 @@ Use the following parameters to request a contract for the resource and artifact
 
 The request body must contain a contract offer. This contract must match the one the resource was created with. 
 The shell script we used to create the resource added a __USE__ permission to the resource. 
-Therefore, we offer a policy with a __USE__ permission.
+Therefore, we offer a policy with a __USE__ permission (you will find examples for the USE permission and other at the [Get example policy endpoint](http://localhost:8081/api/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/Usage%20Control/getExampleUsagePolicy)).
+
 ```json
 [ {
         "@type" : "ids:Permission",
-        "@id" : "http://localhost:8080/api/rules/5041c3e5-4933-419d-87d9-474b98ced678",
+        "@id" : "http://provider:8080/api/rules/5041c3e5-4933-419d-87d9-474b98ced678",
         "ids:description" : [ {
           "@value" : "provide-access",
           "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -186,7 +187,7 @@ If you execute this command the resulting Contract Response should be similar to
   "modificationDate": "2021-07-06T05:54:54.980+0000",
   "remoteId": "http://provider:8080/api/agreements/7a78b3e6-9efd-40f8-9427-b03743ec4980",
   "confirmed": true,
-  "value": "{\n  \"@context\" : {\n    \"ids\" : \"https://w3id.org/idsa/core/\"\n  },\n  \"@type\" : \"ids:ContractAgreement\",\n  \"@id\" : \"http://provider:8080/api/agreements/7a78b3e6-9efd-40f8-9427-b03743ec4980\",\n  \"ids:prohibition\" : [ ],\n  \"ids:obligation\" : [ ],\n  \"ids:contractStart\" : {\n    \"@value\" : \"2021-07-06T05:54:54.172Z\",\n    \"@type\" : \"http://www.w3.org/2001/XMLSchema#dateTimeStamp\"\n  },\n  \"ids:contractDate\" : {\n    \"@value\" : \"2021-07-06T05:54:54.171Z\",\n    \"@type\" : \"http://www.w3.org/2001/XMLSchema#dateTimeStamp\"\n  },\n  \"ids:provider\" : {\n    \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/provider\"\n  },\n  \"ids:permission\" : [ {\n    \"@type\" : \"ids:Permission\",\n    \"@id\" : \"http://localhost:8080/api/rules/5041c3e5-4933-419d-87d9-474b98ced678\",\n    \"ids:action\" : [ {\n      \"@id\" : \"idsc:USE\"\n    } ],\n    \"ids:description\" : [ {\n      \"@value\" : \"provide-access\",\n      \"@type\" : \"http://www.w3.org/2001/XMLSchema#string\"\n    } ],\n    \"ids:assigner\" : [ {\n      \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/provider\"\n    } ],\n    \"ids:title\" : [ {\n      \"@value\" : \"Example Usage Policy\",\n      \"@type\" : \"http://www.w3.org/2001/XMLSchema#string\"\n    } ],\n    \"ids:assignee\" : [ {\n      \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/consumer\"\n    } ],\n    \"ids:target\" : {\n      \"@id\" : \"http://provider:8080/api/artifacts/563ddf04-43ee-4eae-9634-16b70cc65ca7\"\n    }\n  } ],\n  \"ids:consumer\" : {\n    \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/consumer\"\n  }\n}",
+  "value": "{\n  \"@context\" : {\n    \"ids\" : \"https://w3id.org/idsa/core/\"\n  },\n  \"@type\" : \"ids:ContractAgreement\",\n  \"@id\" : \"http://provider:8080/api/agreements/7a78b3e6-9efd-40f8-9427-b03743ec4980\",\n  \"ids:prohibition\" : [ ],\n  \"ids:obligation\" : [ ],\n  \"ids:contractStart\" : {\n    \"@value\" : \"2021-07-06T05:54:54.172Z\",\n    \"@type\" : \"http://www.w3.org/2001/XMLSchema#dateTimeStamp\"\n  },\n  \"ids:contractDate\" : {\n    \"@value\" : \"2021-07-06T05:54:54.171Z\",\n    \"@type\" : \"http://www.w3.org/2001/XMLSchema#dateTimeStamp\"\n  },\n  \"ids:provider\" : {\n    \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/provider\"\n  },\n  \"ids:permission\" : [ {\n    \"@type\" : \"ids:Permission\",\n    \"@id\" : \"http://provider:8080/api/rules/5041c3e5-4933-419d-87d9-474b98ced678\",\n    \"ids:action\" : [ {\n      \"@id\" : \"idsc:USE\"\n    } ],\n    \"ids:description\" : [ {\n      \"@value\" : \"provide-access\",\n      \"@type\" : \"http://www.w3.org/2001/XMLSchema#string\"\n    } ],\n    \"ids:assigner\" : [ {\n      \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/provider\"\n    } ],\n    \"ids:title\" : [ {\n      \"@value\" : \"Example Usage Policy\",\n      \"@type\" : \"http://www.w3.org/2001/XMLSchema#string\"\n    } ],\n    \"ids:assignee\" : [ {\n      \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/consumer\"\n    } ],\n    \"ids:target\" : {\n      \"@id\" : \"http://provider:8080/api/artifacts/563ddf04-43ee-4eae-9634-16b70cc65ca7\"\n    }\n  } ],\n  \"ids:consumer\" : {\n    \"@id\" : \"https://w3id.org/idsa/autogen/baseConnector/consumer\"\n  }\n}",
   "_links": {
     "self": {
       "href": "http://localhost:8081/api/agreements/f1acf392-8c87-49ea-afa5-4c18b2751f07"
