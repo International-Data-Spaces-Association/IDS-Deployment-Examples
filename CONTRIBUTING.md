@@ -7,6 +7,7 @@ This is an ongoing project of the developers of the IDSA Repositories:
 * [IDS-ConfigurationManager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager)
 * [IDS-ConfigurationManager-UI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI)
 * [IDS-Messaging-Services](https://github.com/International-Data-Spaces-Association/IDS-Messaging-Services)
+* [IDS-Metadata-Broker-Open-Core](https://github.com/International-Data-Spaces-Association/metadata-broker-open-core)
 * and anyone interested in providing deployment examples for open source IDS components.
 
 You are very welcome to contribute to this project when you find a bug, want to suggest an
