@@ -12,15 +12,12 @@ This is a deployment example for the **Full Setup** of the Dataspace Connector. 
 
 **Note**: 
 This example can not be used with the current IDS Metadata Broker off-the-shelf as a valid IDS identity certificate is not included. 
-To get and install your own IDS identity certificate, please read the provided [Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip).
-Other than described there, in this example, the `config.json` and the `KeyStore` are located at  `/dataspaceconnector/config/`.
+To get and install your own IDS identity certificate, please read the provided [documentation](https://international-data-spaces-association.github.io/DataspaceConnector/).
 
 ---
 
 In this setup, the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with the listed extensions:
-* [Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager), 
-* [Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), 
-* [DSC Camel Instance](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance),
+* [Dataspace Connector UI](https://github.com/International-Data-Spaces-Association/DataspaceConnectorUI), 
 * PostgreSQL DB
 
 ### Components & Versions
@@ -28,11 +25,9 @@ This deployment example builds on the following compatible versions:
 
 | Component | Version |
 |:----------|:--------|
-| Dataspace Connector | 4.3.1 |
-| Configuration Manager | 7.1.0 |
-| Configuration Manager GUI | 7.1.0 |
-| DSC Camel Instance | 1.2.1 |
-| PostgreSQL | 12 |
+| Dataspace Connector | 6.0.0 |
+| Dataspace Connector UI | 8.0.0 |
+| PostgreSQL | 13 |
 
 ### Prerequisites
   - Git
@@ -56,14 +51,14 @@ This deployment example builds on the following compatible versions:
    ```
    docker-compose up
    ```    
+   - Note: If the example should have already been setup locally in an older version before Dataspace Connector 6.0.0, the `dataspaceconnector-data` volume must be deleted, since it was initially created with PostgreSQL 12 and is thus incompatible with PostgreSQL 13. The complete volume name can be found by: `docker volume ls` and should start with `dataspaceconnector-data`. It can be removed by `docker volume rm <name>`.  
+   
 5. After all systems have been booted, they can be reached (by default) at the following URLs:
-   - Dataspace Connector Swagger UI: https://localhost:8080/admin/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+   - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
      - Basic-Auth default credentials: username = admin, password = password
-   - Configuration Manager Swagger UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
-   - Configuration Manager GUI: http://localhost:8082/dashboard
-   - DSC Camel Instance: https://localhost:9090
+   - Dataspace Connector UI: http://localhost:8082/dashboard
 
-Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` ([Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip) for detailed information).
+Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/`, see the provided [documentation](https://international-data-spaces-association.github.io/DataspaceConnector/).
 
 ### Stop & Uninstall
   - Run `docker-compose down` inside the same folder you started the Dataspace Connector
@@ -73,11 +68,4 @@ Individual settings can be provided via the `.env-files` of the respective compo
 
 This is an ongoing project of the developers of the Dataspace Connector repositories:
 * [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
-* [DSC Camel Instance](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance)
-* [IDS Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager)
-* [IDS Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI)
-
-
-
-
-
+* [Dataspace Connector UI](https://github.com/International-Data-Spaces-Association/DataspaceConnectorUI)
