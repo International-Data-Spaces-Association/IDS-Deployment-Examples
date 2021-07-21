@@ -69,8 +69,3 @@ Individual settings can be provided via the `.env-files` of the respective compo
 This is an ongoing project of the developers of the Dataspace Connector repositories:
 * [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
 * [Dataspace Connector UI](https://github.com/International-Data-Spaces-Association/DataspaceConnectorUI)
-
-
-
-
-
