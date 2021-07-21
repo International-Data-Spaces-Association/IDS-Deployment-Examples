@@ -51,6 +51,8 @@ This deployment example builds on the following compatible versions:
    ```
    docker-compose up
    ```    
+   - Note: If the example should have already been setup locally in an older version before Dataspace Connector 6.0.0, the `dataspaceconnector-data` volume must be deleted, since it was initially created with PostgreSQL 12 and is thus incompatible with PostgreSQL 13. The complete volume name can be found by: `docker volume ls` and should start with `dataspaceconnector-data`. It can be removed by `docker volume rm <name>`.  
+   
 5. After all systems have been booted, they can be reached (by default) at the following URLs:
    - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
      - Basic-Auth default credentials: username = admin, password = password
