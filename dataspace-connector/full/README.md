@@ -18,7 +18,7 @@ Other than described there, in this example, the `config.json` and the `KeyStore
 ---
 
 In this setup, the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with the listed extensions:
-* [Dataspace Connector GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), 
+* [Dataspace Connector GUI](https://github.com/International-Data-Spaces-Association/DataspaceConnectorUI), 
 * PostgreSQL DB
 
 ### Components & Versions
@@ -67,7 +67,7 @@ Individual settings can be provided via the `.env-files` of the respective compo
 
 This is an ongoing project of the developers of the Dataspace Connector repositories:
 * [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
-* [IDS Dataspace Connector GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI)
+* [IDS Dataspace Connector GUI](https://github.com/International-Data-Spaces-Association/DataspaceConnectorUI)
 
 
 
