@@ -18,9 +18,7 @@ Other than described there, in this example, the `config.json` and the `KeyStore
 ---
 
 In this setup, the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with the listed extensions:
-* [Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager), 
-* [Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), 
-* [DSC Camel Instance](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance),
+* [Dataspace Connector GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI), 
 * PostgreSQL DB
 
 ### Components & Versions
@@ -28,11 +26,9 @@ This deployment example builds on the following compatible versions:
 
 | Component | Version |
 |:----------|:--------|
-| Dataspace Connector | 4.3.1 |
-| Configuration Manager | 7.1.0 |
-| Configuration Manager GUI | 7.1.0 |
-| DSC Camel Instance | 1.2.1 |
-| PostgreSQL | 12 |
+| Dataspace Connector | 6.0.0 |
+| Dataspace Connector GUI | 8.0.0 |
+| PostgreSQL | 13 |
 
 ### Prerequisites
   - Git
@@ -57,11 +53,9 @@ This deployment example builds on the following compatible versions:
    docker-compose up
    ```    
 5. After all systems have been booted, they can be reached (by default) at the following URLs:
-   - Dataspace Connector Swagger UI: https://localhost:8080/admin/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+   - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
      - Basic-Auth default credentials: username = admin, password = password
-   - Configuration Manager Swagger UI: http://localhost:8081/swagger-ui/index.html?url=/v3/api-docs/
-   - Configuration Manager GUI: http://localhost:8082/dashboard
-   - DSC Camel Instance: https://localhost:9090
+   - Dataspace Connector GUI: http://localhost:8082/dashboard
 
 Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/` ([Download DSC v4 Wiki](https://international-data-spaces-association.github.io/DataspaceConnector/assets/files/dsc_v4_wiki.zip) for detailed information).
 
@@ -73,9 +67,7 @@ Individual settings can be provided via the `.env-files` of the respective compo
 
 This is an ongoing project of the developers of the Dataspace Connector repositories:
 * [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
-* [DSC Camel Instance](https://github.com/International-Data-Spaces-Association/DSC-Camel-Instance)
-* [IDS Configuration Manager](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager)
-* [IDS Configuration Manager GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI)
+* [IDS Dataspace Connector GUI](https://github.com/International-Data-Spaces-Association/IDS-ConfigurationManager-UI)
 
 
 
