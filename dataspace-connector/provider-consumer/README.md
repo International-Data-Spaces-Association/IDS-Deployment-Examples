@@ -65,6 +65,8 @@ A resource at the provider connector can be setup using the provided __create_re
 ```
 to set up the resource on the provider.
 
+The next steps can be followed manually or importing into [Postman](https://www.postman.com) the configured collection [prov_cons.postman_collection](./prov_cons.postman_collection).
+
 #### Consuming the resource
 If you run the self-description request again after creating a resource the response should contain a resource catalog similar to this:
 ```json
