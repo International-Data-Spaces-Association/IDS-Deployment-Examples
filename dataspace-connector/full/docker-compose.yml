@@ -25,7 +25,6 @@ services:
       - local
     volumes:
       - ./dataspaceconnector/config:/conf
-      - ./truststore.p12:/conf/truststore.p12
     depends_on:
       - postgres
     restart: always
