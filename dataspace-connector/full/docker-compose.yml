@@ -30,7 +30,7 @@ services:
     restart: always
 
   ui:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.0.0
+    image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.1.0
     container_name: ui
     ports:
       - 8082:8082
