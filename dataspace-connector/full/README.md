@@ -26,7 +26,7 @@ This deployment example builds on the following compatible versions:
 | Component | Version |
 |:----------|:--------|
 | Dataspace Connector | 6.0.0 |
-| Dataspace Connector UI | 8.0.0 |
+| Dataspace Connector UI | 8.1.0 |
 | PostgreSQL | 13 |
 
 ### Prerequisites
