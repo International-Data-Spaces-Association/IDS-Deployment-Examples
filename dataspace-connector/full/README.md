@@ -25,8 +25,8 @@ This deployment example builds on the following compatible versions:
 
 | Component | Version |
 |:----------|:--------|
-| Dataspace Connector | 6.0.0 |
-| Dataspace Connector UI | 8.1.0 |
+| Dataspace Connector | 6.1.0 |
+| Dataspace Connector UI | 8.3.2 |
 | PostgreSQL | 13 |
 
 ### Prerequisites
@@ -56,7 +56,7 @@ This deployment example builds on the following compatible versions:
 5. After all systems have been booted, they can be reached (by default) at the following URLs:
    - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
      - Basic-Auth default credentials: username = admin, password = password
-   - Dataspace Connector UI: http://localhost:8082/dashboard
+   - Dataspace Connector UI: http://localhost:8083/#/dashboard
 
 Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/`, see the provided [documentation](https://international-data-spaces-association.github.io/DataspaceConnector/).
 

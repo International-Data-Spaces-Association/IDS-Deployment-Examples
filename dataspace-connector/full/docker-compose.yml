@@ -15,7 +15,7 @@ services:
     restart: always
 
   dataspaceconnector:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.0.0
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.1.0
     container_name: dataspaceconnector
     ports:
       - 8080:8080
@@ -30,10 +30,9 @@ services:
     restart: always
 
   ui:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.1.0
+    image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.3.2
     container_name: ui
     ports:
-      - 8082:8082
       - 8083:8083
     env_file:
       - ./ui/ui.env
