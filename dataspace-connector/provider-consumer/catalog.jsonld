@@ -1,0 +1,92 @@
+{
+  "@context" : {
+    "ids" : "https://w3id.org/idsa/core/",
+    "idsc" : "https://w3id.org/idsa/code/"
+  },
+  "@type": "ids:ResourceCatalog",
+  "@id": "https://w3id.org/idsa/autogen/resourceCatalog/4a1fbd8c-8f23-4cc0-871d-9d26596b00c9",
+  "ids:offeredResource": [
+    {
+      "@type": "ids:Resource",
+      "@id": "https://w3id.org/idsa/autogen/resource/e32c5397-f71c-47b5-a384-c9c4cf568117",
+      "ids:language": [
+        {
+          "@id": "idsc:EN"
+        }
+      ],
+      "ids:description": [
+        {
+          "@value": "DWD weather warnings for germany.",
+          "@language": "EN"
+        }
+      ],
+      "ids:version": "3",
+      "ids:title": [
+        {
+          "@value": "DWD Weather Warnings",
+          "@language": "EN"
+        }
+      ],
+      "ids:publisher": "https://dwd.com",
+      "ids:sovereign": "https://dwd.com",
+      "ids:representation": [
+        {
+          "@type": "ids:Representation",
+          "@id": "https://w3id.org/idsa/autogen/representation/f74ab1ad-3a1b-4508-aada-4859dcfa7349",
+          "ids:instance": [
+            {
+              "@type": "ids:Artifact",
+              "@id": "https://w3id.org/idsa/autogen/artifact/d5b1cd4e-2a5a-47c2-86c5-003c6a11ce69",
+              "ids:creationDate": "2021-08-10T13:00:00.000Z"
+            }
+          ],
+          "ids:language": {
+            "@id": "idsc:EN"
+          },
+          "ids:created": "2021-08-10T13:00:00.000Z",
+          "ids:mediaType": {
+            "@type": "ids:IANAMediaType",
+            "@id": "https://w3id.org/idsa/autogen/iANAMediaType/07e5f54e-4e85-4df7-94d3-a7e8b225f1cb",
+            "ids:filenameExtension": "json"
+          },
+          "ids:modified": "2021-08-10T13:00:00.000Z"
+        }
+      ],
+      "ids:contractOffer": [
+        {
+          "@type": "ids:ContractOffer",
+          "@id": "https://w3id.org/idsa/autogen/contractOffer/1d982c8a-c5ae-4c19-9a26-6815e9540fc8",
+          "ids:permission": [
+            {
+            "@type": "ids:Permission",
+            "@id": "https://w3id.org/idsa/autogen/permission/cf1cb758-b96d-4486-b0a7-f3ac0e289588",
+            "ids:description": [
+                {
+                "@value": "provide-access",
+                "@type": "http://www.w3.org/2001/XMLSchema#string"
+                }
+            ],
+            "ids:title": [
+                {
+                "@value": "Example Usage Policy",
+                "@type": "http://www.w3.org/2001/XMLSchema#string"
+                }
+            ],
+            "ids:action": [
+                {
+                  "@id": "idsc:USE"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ids:keyword": [
+        {
+          "@value": "DWD",
+          "@language": "EN"
+        }
+      ]
+    }
+  ]
+}

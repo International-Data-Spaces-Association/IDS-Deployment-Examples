@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2021-08-18
+
+### Updated
+- Provider-consumer example for DSC 6.0.0
+
 ## 2021-07-06
 
 ### Added

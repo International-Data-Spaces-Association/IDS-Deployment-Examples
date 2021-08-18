@@ -3,20 +3,24 @@ version: '3.5'
 services:
 
   provider:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector:5.1.2
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.0.0
     ports:
       - 8080:8080
     networks:
       - local
     volumes:
       - ./config_provider.json:/config/config.json
+      - ./bootstrap.properties:/app/bootstrap/bootstrap.properties
+      - ./catalog.jsonld:/app/bootstrap/catalog.jsonld
     environment:
       - SERVER_SSL_ENABLED=false
       - CONFIGURATION_PATH=/config/config.json
+      - BOOTSTRAP_ENABLED=true
+      - BOOTSTRAP_PATH=/app/bootstrap
     restart: always
 
   consumer:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector:5.1.2
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.0.0
     ports:
       - 8081:8080
     networks:
