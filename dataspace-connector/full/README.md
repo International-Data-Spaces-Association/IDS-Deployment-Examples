@@ -18,6 +18,7 @@ To get and install your own IDS identity certificate, please read the provided [
 
 In this setup, the [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) is started with the listed extensions:
 * [Dataspace Connector UI](https://github.com/International-Data-Spaces-Association/DataspaceConnectorUI), 
+* Portainer
 * PostgreSQL DB
 
 ### Components & Versions
@@ -25,8 +26,9 @@ This deployment example builds on the following compatible versions:
 
 | Component | Version |
 |:----------|:--------|
-| Dataspace Connector | 6.1.0 |
-| Dataspace Connector UI | 8.3.2 |
+| Dataspace Connector | 6.1.3 |
+| Dataspace Connector UI | 8.4.ß |
+| Portainer | 2.6.2 |
 | PostgreSQL | 13 |
 
 ### Prerequisites
@@ -51,12 +53,20 @@ This deployment example builds on the following compatible versions:
    ```
    docker-compose up
    ```    
-   - Note: If the example should have already been setup locally in an older version before Dataspace Connector 6.0.0, the `dataspaceconnector-data` volume must be deleted, since it was initially created with PostgreSQL 12 and is thus incompatible with PostgreSQL 13. The complete volume name can be found by: `docker volume ls` and should start with `dataspaceconnector-data`. It can be removed by `docker volume rm <name>`.  
+   - Note: If the example should have already been setup locally in an older version before Dataspace Connector 6.0.0, 
+     the `dataspaceconnector-data` volume must be deleted, since it was initially created with PostgreSQL 12 and is 
+     thus incompatible with PostgreSQL 13. 
+     The complete volume name can be found by: `docker volume ls` and should start with `dataspaceconnector-data`. 
+     It can be removed by `docker volume rm <name>`.  
    
 5. After all systems have been booted, they can be reached (by default) at the following URLs:
    - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
      - Basic-Auth default credentials: username = admin, password = password
    - Dataspace Connector UI: http://localhost:8083/#/dashboard
+   - Portainer UI: http://localhost:9000
+     - Username and password must be set on first initialization (these should be identical to the credentials provided in the .env file)
+     - Docker Endpoint must be then provided
+
 
 Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/`, see the provided [documentation](https://international-data-spaces-association.github.io/DataspaceConnector/).
 
