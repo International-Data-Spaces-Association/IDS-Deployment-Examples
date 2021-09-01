@@ -66,8 +66,6 @@ This deployment example builds on the following compatible versions:
 Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/`, see the provided [documentation](https://international-data-spaces-association.github.io/DataspaceConnector/).
 
 ### Stop & Uninstall
-
-### Stop & Uninstall
   - Run `docker-compose down` inside the same folder you started the Dataspace Connector
   - Remove the repository folder
 
