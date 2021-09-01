@@ -11,7 +11,7 @@ This is a deployment example for the **Full Setup** of the Dataspace Connector. 
 ---
 
 **Note**: 
-This example can not be used with the current IDS Metadata Broker off-the-shelf as a valid IDS identity certificate is not included. 
+This example can not be used with the current IDS Metadata Broker and IDS AppStore off-the-shelf as a valid IDS identity certificate is not included. 
 To get and install your own IDS identity certificate, please read the provided [documentation](https://international-data-spaces-association.github.io/DataspaceConnector/).
 
 ---
@@ -45,11 +45,7 @@ This deployment example builds on the following compatible versions:
     ```
     cd IDS-Deployment-Examples/dataspace-connector/full
     ```
-3. Use a Docker Compose command to load the different Docker images of the components.
-    ```
-    docker-compose pull
-    ```
-4. Use a Docker Compose command to start all of the component's Docker containers.
+3. Use a Docker Compose command to start all of the component's Docker containers, will pull images if not already existing.
    ```
    docker-compose up
    ```    
@@ -59,22 +55,21 @@ This deployment example builds on the following compatible versions:
      The complete volume name can be found by: `docker volume ls` and should start with `dataspaceconnector-data`. 
      It can be removed by `docker volume rm <name>`.  
    
-5. After all systems have been booted, they can be reached (by default) at the following URLs:
+4. After all systems have been booted, they can be reached (by default) at the following URLs:
    - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
      - Basic-Auth default credentials: username = admin, password = password
    - Dataspace Connector UI: http://localhost:8083/#/dashboard
    - Portainer UI: http://localhost:9000
-     - Username and password must be set on first initialization (these should be identical to the credentials provided in the .env file)
-     - Docker Endpoint must be then provided
-
+     - Username and password must be set on first initialization. These have to be identical to the credentials provided in the Dataspace Connector .env file for Portainer communication.
+     - Docker Endpoint must be provided next, either via the Portainer initialization dialog or later via the endpoint settings.
 
 Individual settings can be provided via the `.env-files` of the respective components and via the `config.json` in `/dataspaceconnector/config/`, see the provided [documentation](https://international-data-spaces-association.github.io/DataspaceConnector/).
 
 ### Stop & Uninstall
+
+### Stop & Uninstall
   - Run `docker-compose down` inside the same folder you started the Dataspace Connector
   - Remove the repository folder
-
-## Developers
 
 This is an ongoing project of the developers of the Dataspace Connector repositories:
 * [Dataspace Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector)
