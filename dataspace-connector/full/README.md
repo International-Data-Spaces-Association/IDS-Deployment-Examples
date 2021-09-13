@@ -56,7 +56,7 @@ This deployment example builds on the following compatible versions:
      It can be removed by `docker volume rm <name>`.
    - [Portainer Note]: Portainer is in this example to enable IDS-App deployment into the connector from an IDS-AppStore. If no use of IDS-Apps is intended, Portainer can be removed from the docker-compose configuration.
    - [Portainer Note]: If no admin account is created in Portainer via the Portainer-UI within 5 minutes after starting the container, Portainer will automatically restart itself in this example.
-   - [Portainer Note]: If use of IDS-Apps is intended, the Portainer settings must first be adjusted in the connector application.properties and after starting the example a matching admin account and endpoint must be created via the Portainer-UI.
+   - [Portainer Note]: If use of IDS-Apps is intended, the Portainer settings must first be adjusted in the dataspaceconnector.env file and after starting the example a matching admin account and endpoint must be created via the Portainer-UI.
    - [Connector Note]: This example does not have the ids:connectorProxy entry in the connector configuration set. If a proxy is to be used, it must first be added to the connector configuration.
    
 4. After all systems have been booted, they can be reached (by default) at the following URLs:
