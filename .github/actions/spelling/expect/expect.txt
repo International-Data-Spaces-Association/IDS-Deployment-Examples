@@ -57,4 +57,4 @@ templated
 WFS
 xml
 Portainer
-conncetor
+connector
