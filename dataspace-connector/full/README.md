@@ -49,11 +49,15 @@ This deployment example builds on the following compatible versions:
    ```
    docker-compose up
    ```    
-   - Note: If the example should have already been setup locally in an older version before Dataspace Connector 6.0.0, 
+   - [PostgreSQL Note]: If the example should have already been setup locally in an older version before Dataspace Connector 6.0.0, 
      the `dataspaceconnector-data` volume must be deleted, since it was initially created with PostgreSQL 12 and is 
      thus incompatible with PostgreSQL 13. 
      The complete volume name can be found by: `docker volume ls` and should start with `dataspaceconnector-data`. 
-     It can be removed by `docker volume rm <name>`.  
+     It can be removed by `docker volume rm <name>`.
+   - [Portainer Note]: Portainer is in this example to enable IDS-App deployment into the connector from an IDS-AppStore. If no use of IDS-Apps is intended, Portainer can be removed from the docker-compose configuration.
+   - [Portainer Note]: If no admin account is created in Portainer via the Portainer-UI within 5 minutes after starting the container, Portainer will automatically restart itself in this example.
+   - [Portainer Note]: If use of IDS-Apps is intended, the Portainer settings must first be adjusted in the dataspaceconnector.env file and after starting the example a matching admin account and endpoint must be created via the Portainer-UI.
+   - [Connector Note]: This example does not have the ids:connectorProxy entry in the connector configuration set. If a proxy is to be used, it must first be added to the connector configuration.
    
 4. After all systems have been booted, they can be reached (by default) at the following URLs:
    - Dataspace Connector Swagger UI: https://localhost:8080/api/docs
