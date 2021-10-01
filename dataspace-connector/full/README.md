@@ -27,7 +27,7 @@ This deployment example builds on the following compatible versions:
 | Component | Version |
 |:----------|:--------|
 | Dataspace Connector | 6.3.0 |
-| Dataspace Connector UI | 8.4.0 |
+| Dataspace Connector UI | 8.5.0 |
 | Portainer | 2.6.2 |
 | PostgreSQL | 13 |
 

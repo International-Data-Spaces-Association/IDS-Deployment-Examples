@@ -43,7 +43,7 @@ services:
     restart: always
 
   ui:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.4.0
+    image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.5.0
     container_name: ui
     ports:
       - 8083:8083
