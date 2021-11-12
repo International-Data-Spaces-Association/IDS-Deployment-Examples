@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 ## 2021-10-21
 
+### Added
+- Provider-consumer example Postman collection to connect to the consumer API and consume the resource.
+
+### Removed
+- Outdated Provider-consumer Readme.md section about consuming resources (use Postman collection instead).
+
+## 2021-10-21
+
 ### Updated
 - Provider-consumer example to DSC 6.2.0
 - Set connector state to ONLINE in the config files.

@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "797d206c-1fb6-493b-98b0-de2eb24b5734",
+		"name": "IDS PUB - SUB",
+		"description": "Example from https://github.com/sebplorenz/IDS-Deployment-Examples (branch feature/provider-consumer-example), pending to be merged to https://github.com/International-Data-Spaces-Association/IDS-Deployment-Examples at the IDS-Deployment-Examples/dataspace-connector/provider-consumer/ folder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "General description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Retrieve Catalog ID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.collectionVariables.set(\"catalog\", jsonData[\"ids:resourceCatalog\"][0][\"@id\"])\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{CONSUMER_URL}}/api/ids/description?recipient={{PROVIDER_URL}}",
+					"host": [
+						"{{CONSUMER_URL}}"
+					],
+					"path": [
+						"api",
+						"ids",
+						"description"
+					],
+					"query": [
+						{
+							"key": "recipient",
+							"value": "{{PROVIDER_URL}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resource catalog description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Retrieve Catalog ID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.collectionVariables.set(\"resource\", jsonData[\"ids:offeredResource\"][0][\"@id\"]);\r",
+							"    pm.collectionVariables.set(\"artifact\", jsonData[\"ids:offeredResource\"][0][\"ids:representation\"][0][\"ids:instance\"][0][\"@id\"]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{CONSUMER_URL}}/api/ids/description?recipient={{PROVIDER_URL}}&elementId={{catalog}}",
+					"host": [
+						"{{CONSUMER_URL}}"
+					],
+					"path": [
+						"api",
+						"ids",
+						"description"
+					],
+					"query": [
+						{
+							"key": "recipient",
+							"value": "{{PROVIDER_URL}}"
+						},
+						{
+							"key": "elementId",
+							"value": "{{catalog}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Negotiate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Retrieve agreement ID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var agreementLong = jsonData[\"_links\"][\"artifacts\"][\"href\"]\r",
+							"    var agreementId = agreementLong.replace(\"http://localhost:8081\", \"\").replace(\"/api/agreements/\", \"\").replace(\"/artifacts{?page,size}\", \"\")\r",
+							"pm.environment.get(\"variable_key\");\r",
+							"    console.log(agreementLong,agreementId)\r",
+							"    pm.collectionVariables.set(\"agreement\", agreementId)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[ {\r\n        \"@type\" : \"ids:Permission\",\r\n        \"@id\" : \"http://provider:8080/api/rules/5041c3e5-4933-419d-87d9-474b98ced678\",\r\n        \"ids:description\" : [ {\r\n          \"@value\" : \"provide-access\",\r\n          \"@type\" : \"http://www.w3.org/2001/XMLSchema#string\"\r\n        } ],\r\n        \"ids:title\" : [ {\r\n          \"@value\" : \"Example Usage Policy\",\r\n          \"@type\" : \"http://www.w3.org/2001/XMLSchema#string\"\r\n        } ],\r\n        \"ids:action\" : [ {\r\n          \"@id\" : \"https://w3id.org/idsa/code/USE\"\r\n        }],\r\n        \"ids:target\" : \"{{artifact}}\"\r\n} ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{CONSUMER_URL}}/api/ids/contract?recipient={{PROVIDER_URL}}&resourceIds={{resource}}&artifactIds={{artifact}}&download=false",
+					"host": [
+						"{{CONSUMER_URL}}"
+					],
+					"path": [
+						"api",
+						"ids",
+						"contract"
+					],
+					"query": [
+						{
+							"key": "recipient",
+							"value": "{{PROVIDER_URL}}"
+						},
+						{
+							"key": "resourceIds",
+							"value": "{{resource}}"
+						},
+						{
+							"key": "artifactIds",
+							"value": "{{artifact}}"
+						},
+						{
+							"key": "download",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consume",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Retrieve data URL\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var dataLink = jsonData[\"_embedded\"][\"artifacts\"][0][\"_links\"][\"data\"][\"href\"]\r",
+							"    pm.collectionVariables.set(\"dataLink\", dataLink)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{CONSUMER_URL}}/api/agreements/{{agreement}}/artifacts",
+					"host": [
+						"{{CONSUMER_URL}}"
+					],
+					"path": [
+						"api",
+						"agreements",
+						"{{agreement}}",
+						"artifacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{dataLink}}",
+					"host": [
+						"{{dataLink}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "CONSUMER_URL",
+			"value": "http://localhost:8081"
+		},
+		{
+			"key": "PROVIDER_URL",
+			"value": "http://provider:8080/api/ids/data"
+		},
+		{
+			"key": "catalog",
+			"value": ""
+		},
+		{
+			"key": "resource",
+			"value": ""
+		},
+		{
+			"key": "artifact",
+			"value": ""
+		},
+		{
+			"key": "agreement",
+			"value": ""
+		},
+		{
+			"key": "dataLink",
+			"value": ""
+		}
+	]
+}
