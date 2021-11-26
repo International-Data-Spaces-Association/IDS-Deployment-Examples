@@ -10,9 +10,13 @@ services:
       - local
     volumes:
       - ./config_provider.json:/config/config.json
+      - ./bootstrap.properties:/app/bootstrap/bootstrap.properties
+      - ./catalog.jsonld:/app/bootstrap/catalog.jsonld
     environment:
       - SERVER_SSL_ENABLED=false
       - CONFIGURATION_PATH=/config/config.json
+      - BOOTSTRAP_ENABLED=true
+      - BOOTSTRAP_PATH=/app/bootstrap
     restart: always
 
   consumer:

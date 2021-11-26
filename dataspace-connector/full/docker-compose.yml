@@ -29,11 +29,23 @@ services:
       - postgres
     restart: always
 
+  portainer:
+    image: portainer/portainer-ce:2.6.2
+    container_name: portainer
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - local
+    restart: always
+
   ui:
     image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.6.0
     container_name: ui
     ports:
-      - 8082:8082
       - 8083:8083
     env_file:
       - ./ui/ui.env
@@ -49,3 +61,4 @@ networks:
 
 volumes:
   dataspaceconnector-data: {}
+  portainer_data: {}

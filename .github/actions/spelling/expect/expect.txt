@@ -56,3 +56,5 @@ ows
 templated
 WFS
 xml
+Portainer
+connector
