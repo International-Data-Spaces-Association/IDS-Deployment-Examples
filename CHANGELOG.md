@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2021-11-26
+
+### Updated
+- Slim example to DSC 6.5.1.
+- Full example to DSC 6.5.1.
+- Provider-consumer example to DSC 6.5.1.
+- Replace *@project.version@* in config files with fixed value.
+
 ## 2021-10-21
 
 ### Updated
