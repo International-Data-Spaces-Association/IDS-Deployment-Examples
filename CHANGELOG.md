@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 ## 2021-12-17
 
+### Added
+- Added IDS-Testbed.
+
+### Changed
+- Rename MetaData-broker-open-core to metadata-broker.
+
 ### Updated
 - Slim example to DSC 6.5.2.
 - Full example to DSC 6.5.2.
