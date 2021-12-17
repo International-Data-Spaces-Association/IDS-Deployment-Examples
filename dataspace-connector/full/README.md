@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://dataspace-connector.de/dsc_logo.svg"><img src="https://dataspace-connector.de/dsc_logo.svg" alt="Dataspace Connector Logo" width="200"></a>
+  <a href="https://dataspace-connector.de/"><img src="https://github.com/International-Data-Spaces-Association/DataspaceConnector/blob/main/docs/assets/images/dsc_logo.png" alt="Dataspace Connector Logo" width="200"></a>
   <br>
       Dataspace Connector - Full Setup
   <br>
@@ -26,7 +26,7 @@ This deployment example builds on the following compatible versions:
 
 | Component | Version |
 |:----------|:--------|
-| Dataspace Connector | 6.3.1 |
+| Dataspace Connector | 6.5.2 |
 | Dataspace Connector UI | 8.6.0 |
 | Portainer | 2.6.2 |
 | PostgreSQL | 13 |
