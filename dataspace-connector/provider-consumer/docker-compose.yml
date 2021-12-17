@@ -3,7 +3,7 @@ version: '3.5'
 services:
 
   provider:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.5.1
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.5.2
     ports:
       - 8080:8080
     networks:
@@ -20,7 +20,7 @@ services:
     restart: always
 
   consumer:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.5.1
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.5.2
     ports:
       - 8081:8080
     networks:

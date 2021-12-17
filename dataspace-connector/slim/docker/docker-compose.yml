@@ -14,7 +14,7 @@ services:
       - dataspaceconnector-data:/var/lib/postgresql/data
 
   connector:
-    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.5.1
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.5.2
     container_name: 'dataspaceconnector'
     ports:
       - 8080:8080
