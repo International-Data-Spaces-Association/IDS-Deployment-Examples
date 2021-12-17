@@ -1,0 +1,64 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    ports:
+      - 5432:5432
+    env_file:
+      - ./postgres/postgres.env
+    networks:
+      - local
+    volumes:
+      - dataspaceconnector-data:/var/lib/postgresql/data
+    restart: always
+
+  dataspaceconnector:
+    image: ghcr.io/international-data-spaces-association/dataspace-connector:6.5.2
+    container_name: dataspaceconnector
+    ports:
+      - 8080:8080
+    env_file:
+      - ./dataspaceconnector/dataspaceconnector.env
+    networks:
+      - local
+    volumes:
+      - ./dataspaceconnector/config:/conf
+    depends_on:
+      - postgres
+    restart: always
+
+  portainer:
+    image: portainer/portainer-ce:2.6.2
+    container_name: portainer
+    ports:
+      - 8000:8000
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - local
+    restart: always
+
+  ui:
+    image: ghcr.io/international-data-spaces-association/dataspace-connector-ui:8.6.0
+    container_name: ui
+    ports:
+      - 8083:8083
+    env_file:
+      - ./ui/ui.env
+    networks:
+      - local
+    depends_on:
+      - dataspaceconnector
+    restart: always
+
+networks:
+  local:
+    driver: bridge
+
+volumes:
+  dataspaceconnector-data: {}
+  portainer_data: {}
