@@ -1,8 +1,17 @@
+<h1 align="center" >
+    This repository is archived with DSC v7.0.3 / DSC-UI v9.3.0.
+    Please use the
+    <a href="https://github.com/International-Data-Spaces-Association/IDS-Deployment-Scenarios">IDS Deployment Scenarios</a>
+      or the
+    <a href="https://github.com/International-Data-Spaces-Association/IDS-testbed">IDS Testbed</a>
+    to get an up-to-date IDS system.
+</h1>
+
+
 <h1 align="center">
       IDS Deployment Examples
   <br>
 </h1>
-
 
 <p align="center">
   <a href="#Overview">Overview</a> •
